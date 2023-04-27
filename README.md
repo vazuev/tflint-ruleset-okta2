@@ -1,5 +1,5 @@
 # TFLint Ruleset Template
-[![Build Status](https://github.com/terraform-linters/tflint-ruleset-template/workflows/build/badge.svg?branch=main)](https://github.com/terraform-linters/tflint-ruleset-template/actions)
+[![Build Status](https://github.com/terraform-linters/tflint-ruleset-okta/workflows/build/badge.svg?branch=main)](https://github.com/terraform-linters/tflint-ruleset-okta/actions)
 
 This is a template repository for building a custom ruleset. You can create a plugin repository from "Use this template". See also [Writing Plugins](https://github.com/terraform-linters/tflint/blob/master/docs/developer-guide/plugins.md).
 
@@ -15,11 +15,11 @@ TODO: This template repository does not contain release binaries, so this instal
 You can install the plugin with `tflint --init`. Declare a config in `.tflint.hcl` as follows:
 
 ```hcl
-plugin "template" {
+plugin "okta" {
   enabled = true
 
   version = "0.1.0"
-  source  = "github.com/terraform-linters/tflint-ruleset-template"
+  source  = "github.com/terraform-linters/tflint-ruleset-okta"
 
   signing_key = <<-KEY
   -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -58,7 +58,7 @@ You can run the built plugin like the following:
 
 ```
 $ cat << EOS > .tflint.hcl
-plugin "template" {
+plugin "okta" {
   enabled = true
 }
 EOS
